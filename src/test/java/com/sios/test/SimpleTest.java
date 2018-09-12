@@ -6,18 +6,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SimpleTest {
 
+	
 	@Test
 	public void test() throws InterruptedException {
 		// ChromeDriverまでのパスを設定する
 		System.setProperty("webdriver.chrome.driver", "/Users/ntakei/data/tmp/20180910/chromedriver");
 
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--headless");
 		// Chromeドライバーインスタンスを作成する
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(chromeOptions);
 
 		// Google.comにアクセスする
 		driver.get("https://www.google.com");
@@ -48,7 +52,7 @@ public class SimpleTest {
 		// ブラウザーを閉じる
 		driver.quit();
 		
-		assertEquals(title, "Google!!!!");
+		assertEquals(title, "Google");
 	}
 
 }

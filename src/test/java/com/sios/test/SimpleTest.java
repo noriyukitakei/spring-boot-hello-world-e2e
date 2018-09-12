@@ -16,7 +16,7 @@ public class SimpleTest {
 	@Test
 	public void test() throws InterruptedException {
 		// ChromeDriverまでのパスを設定する
-		System.setProperty("webdriver.chrome.driver", "/Users/ntakei/data/tmp/20180910/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/chromedriver");
 
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--headless");

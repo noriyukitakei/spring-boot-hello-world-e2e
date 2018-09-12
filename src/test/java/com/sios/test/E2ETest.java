@@ -28,7 +28,7 @@ public class E2ETest {
 		// ブラウザーを閉じる
 		driver.quit();
 		
-		assertEquals(title, "Hello World!!2");
+		assertEquals(title, "Hello World!!");
 	}
 
 }

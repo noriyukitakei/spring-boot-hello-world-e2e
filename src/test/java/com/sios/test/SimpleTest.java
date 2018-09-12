@@ -52,7 +52,7 @@ public class SimpleTest {
 		// ブラウザーを閉じる
 		driver.quit();
 		
-		assertEquals(title, "Google");
+		assertEquals(title, "Google!!!!");
 	}
 
 }
